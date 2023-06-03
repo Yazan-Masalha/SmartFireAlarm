@@ -1,0 +1,29 @@
+main
+	__CC2DW
+		____DoICP
+	ATD_init
+	USART_init
+	Lcd_Init
+		Delay_5500us
+		Delay_1us
+	PWM
+		Mul_16X16_U
+		Div_16X16_U
+		msDelay
+interrupt
+	ATD_read
+	Lcd_Cmd
+		Delay_1us
+		Delay_5500us
+		Delay_50us
+	Lcd_Out
+		Lcd_Cmd
+			Delay_1us
+			Delay_5500us
+			Delay_50us
+		Lcd_Chr_CP
+			Lcd_Cmd
+				Delay_1us
+				Delay_5500us
+				Delay_50us
+	USART_Tx
